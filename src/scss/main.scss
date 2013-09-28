@@ -1,0 +1,143 @@
+@import 'translucent';
+
+$header-height : 60px;
+$content-height: 567px;
+
+
+.content{
+  @extend %content;
+  padding:1em 1em 0 1em;
+  // Apply the sizing to this content
+  @include setContentHeight($content-height, $header-height);
+}
+
+  .messages {
+    margin:0;
+    padding:0;
+    list-style-type:none;
+  }
+
+  .messages li {
+    display:block;
+    float:left;
+    clear:both;
+    max-width:60%;
+    margin:0 0 1em 0;
+    padding:0;
+  }
+
+  .messages li:nth-child(even) {
+    float:right;
+  }
+
+  .messages li:nth-child(even) img {
+    float:right;
+  }
+
+  .messages p {
+    border-radius:.75em;
+    background:#e6e5eb;
+    color:#383641;
+    padding:.6875em;
+    margin:0;
+    font-size:.875em;
+  }
+
+  .messages li:nth-child(even) p {
+    background:#158ffe;
+    color:#fff;
+  }
+
+  .messages img {
+    display:block;
+    max-width:65%;
+    border-radius:.75rem;
+  }
+
+
+.phone{
+  position:relative;
+  width: 509px;
+  height: 931px;
+  margin:0 auto;
+  background: url(/img/phone.png);
+}
+
+  .phone__display{
+    position:absolute;
+    top:182px;
+    left:95px;
+    height:$content-height;
+    width:319px;
+  }
+
+    .header{
+      position:relative;
+      height:$header-height;
+
+
+      &:before,
+      &:after{
+        position:absolute;
+        content:'';
+        width:100%;
+        z-index:1;
+      }
+
+      &:before{ // Tint Color
+        height:100%;
+      }
+
+      &:after{  // Bottom Shadow
+        height:1px;
+        bottom:0;
+        box-shadow: 0 1px 0 rgba(0,0,0,.1);
+      }
+
+    }
+
+      %header__sub{
+        position:absolute;
+        top:0;
+        right:0;left:0;
+        height:inherit;
+      }
+
+      .header__text{
+        @extend %header__sub;
+
+        font-weight:300;
+
+        text-align:center;
+        line-height:$header-height;
+        z-index:4;
+      }
+
+
+      .header__background{
+        @extend %header__sub;
+        @extend %headerFlow;
+
+        filter:blur(10px); // Blur it
+        opacity:.2;
+      }
+
+  .phone__content{
+    @extend %contentFlow;
+  }
+
+
+// General page styles
+body{
+  font-family:"Helvetica Neue","Helvetica","sans-serif";
+}
+
+.custom{
+  position:absolute;
+  top:10px;
+
+  style{
+    display:block;
+    white-space:pre;
+  }
+}

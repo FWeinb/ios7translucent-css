@@ -1,0 +1,48 @@
+%content{
+  box-sizing:border-box;
+
+  /* Not covered by autoprefixer... */
+  -webkit-flow-into: content;
+          flow-into: content;   // Define the flow (CSS Region)
+
+
+  // Make it scrollable on the y-axis
+  overflow:hidden;
+  overflow-y:auto;
+
+  // Scroll on touch devices
+  -webkit-overflow-scrolling: touch;  /* Not covered by autoprefixer... */
+          overflow-scrolling: touch;
+
+}
+
+// Header section, blur can be applyed here.
+%headerFlow,
+%contentFlow{
+  // Performance!
+  transform:translateZ(0);
+
+  overflow:hidden;
+
+  /* Not covered by autoprefixer... */
+  -webkit-flow-from: content;
+          flow-from: content;
+}
+
+
+@mixin setContentHeight($content-height, $header-height){
+  height: $content-height;
+
+  // To archive the blur effect in the header, the content must flow though the .header__background element.
+  transform:translateY(-$header-height);
+
+  // Move the content account for the negative translateY
+  &:before{
+    display:block;
+    content:'';
+    height:$header-height;
+  }
+
+  // Remove the :before element from the paint rect
+  margin-bottom: -$header-height;
+}

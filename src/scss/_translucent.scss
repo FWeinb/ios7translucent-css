@@ -29,20 +29,12 @@
           flow-from: content;
 }
 
-
 @mixin setContentHeight($content-height, $header-height){
   height: $content-height;
 
   // To archive the blur effect in the header, the content must flow though the .header__background element.
   transform:translateY(-$header-height);
 
-  // Move the content account for the negative translateY
-  &:before{
-    display:block;
-    content:'';
-    height:$header-height;
-  }
-
-  // Remove the :before element from the paint rect
-  margin-bottom: -$header-height;
+  // Move the content beneth the header
+  padding-top: $header-height;
 }

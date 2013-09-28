@@ -26,18 +26,12 @@
   padding: 1em 1em 0 1em;
   height: 567px;
   transform: translateY(-60px);
-  margin-bottom: -60px;
-}
-/* line 40, ../scss/_translucent.scss */
-.content:before {
-  display: block;
-  content: '';
-  height: 60px;
+  padding-top: 60px;
 }
 
 /* line 14, ../scss/main.scss */
 .messages {
-  margin: 0;
+  margin: 10px 0;
   padding: 0;
   list-style-type: none;
 }

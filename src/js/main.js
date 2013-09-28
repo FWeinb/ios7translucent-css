@@ -35,6 +35,10 @@ window.onload = function() {
     headerBlur : {
       blur    : 0,
       opacity : 0.1
+    },
+    custom : {
+      preset : '',
+      filter : ''
     }
   };
 
@@ -60,6 +64,17 @@ window.onload = function() {
 
       headerBlur.open();
 
+  var headerCustom = gui.addFolder('Custom filter:');
+
+      headerCustom.add(options.custom, 'preset', [ '', 'invert(1)', 'hue-rotate(90deg)', 'grayscale(100%)' ]).onChange(function(change){
+        headerBackgroundNode.style.webkitFilter = change;
+      });
+
+      headerCustom.add(options.custom, 'filter').onChange(function(change){
+        headerBackgroundNode.style.webkitFilter = change;
+      });
+
+      headerCustom.open();
   // Fix dat.gui bug https://code.google.com/p/dat-gui/issues/detail?id=11
   var cInput = document.querySelector('.c input');
       cInput.disabled = true;

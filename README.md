@@ -20,4 +20,4 @@ You need to have nodejs and ruby for compass/sass
 This is currently working in
   * Chrome 29+ (enable  'experimental-webkit-features'/'enable-experimental-web-platform-features')
   * Safari 6.1 beta
-  * Mobile Safari on iOS7 (slow and **no scrolling**)
+  * Mobile Safari on iOS7, scrolling is working. But **no inertial scrolling**

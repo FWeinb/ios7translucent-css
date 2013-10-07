@@ -7,12 +7,8 @@
 
 
   // Make it scrollable on the y-axis
-  overflow:hidden;
   overflow-y:auto;
 
-  // Scroll on touch devices
-  -webkit-overflow-scrolling: touch;  /* Not covered by autoprefixer... */
-          overflow-scrolling: touch;
 
 }
 
@@ -27,6 +23,10 @@
   /* Not covered by autoprefixer... */
   -webkit-flow-from: content;
           flow-from: content;
+}
+
+%contentFlow{
+  -webkit-overflow-scrolling: touch;
 }
 
 @mixin setContentHeight($content-height, $header-height){

@@ -79,7 +79,7 @@ window.onload = function() {
   var cInput = document.querySelector('.c input');
       cInput.disabled = true;
 
-
-
-
 };
+
+// Activate scrolling on iOS7 (Don't know why this is working)
+document.addEventListener('touchstart', function(){});

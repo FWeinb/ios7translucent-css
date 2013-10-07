@@ -6,14 +6,10 @@
   /* Not covered by autoprefixer... */
   -webkit-flow-into: content;
   flow-into: content;
-  overflow: hidden;
   overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  /* Not covered by autoprefixer... */
-  overflow-scrolling: touch;
 }
 
-/* line 21, ../scss/_translucent.scss */
+/* line 17, ../scss/_translucent.scss */
 
 .header__background,
 .phone__content {
@@ -24,6 +20,12 @@
   /* Not covered by autoprefixer... */
   -webkit-flow-from: content;
   flow-from: content;
+}
+
+/* line 28, ../scss/_translucent.scss */
+
+.phone__content {
+  -webkit-overflow-scrolling: touch;
 }
 
 /* line 7, ../scss/main.scss */

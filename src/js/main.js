@@ -10,7 +10,7 @@ window.onload = function() {
   // Add a new rule
   sheet.addRule('.header:before', 'background-color:none');
 
-  var headerBackgroundNode = document.querySelector('.header__background'),
+  var headerBackgroundNode = document.querySelector('.js-header__background'),
       headerTintRule       = sheet.cssRules[0];
 
 

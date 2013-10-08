@@ -1,6 +1,15 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+
 @import 'translucent';
 
 $header-height : 60px;
+$footer-height : 45px;
 $content-height: 567px;
 
 
@@ -8,7 +17,7 @@ $content-height: 567px;
   @extend %content;
   padding:1em 1em 0 1em;
   // Apply the sizing to this content
-  @include setContentHeight($content-height, $header-height);
+  @include setContentHeight($content-height + $header-height + $footer-height, $header-height);
 }
 
   .messages {
@@ -71,11 +80,25 @@ $content-height: 567px;
     width:319px;
   }
 
-    .header{
+    .blurred{
       position:relative;
       height:$header-height;
+    }
 
+    %blurred__sub{
+      position:absolute;
+      top:0;left:0;right:0;
+      height:inherit;
+    }
 
+    .blurred__background{
+      @extend %blurred__sub;
+      @extend %contentFlow;
+      filter:blur(10px); // Blur it
+      opacity:.2;
+    }
+
+    .header{
       &:before,
       &:after{
         position:absolute;
@@ -93,37 +116,60 @@ $content-height: 567px;
         bottom:0;
         box-shadow: 0 1px 0 rgba(0,0,0,.1);
       }
-
     }
 
-      %header__sub{
+    .header__text{
+      @extend %blurred__sub;
+      font-weight:300;
+
+      text-align:center;
+      line-height:$header-height;
+      z-index:4;
+    }
+
+
+    .footer{
+      position:relative;
+      height:$footer-height;
+
+      &:before,
+      &:after{
         position:absolute;
+        content:'';
+        width:100%;
+        z-index:1;
+      }
+
+      &:before{ // Tint Color
+        height:100%;
+      }
+
+      &:after{  // Bottom Shadow
+        height:1px;
         top:0;
-        right:0;left:0;
-        height:inherit;
+        box-shadow: 0 -1px 0 rgba(0,0,0,.1);
       }
+    }
 
-      .header__text{
-        @extend %header__sub;
-
-        font-weight:300;
-
-        text-align:center;
-        line-height:$header-height;
-        z-index:4;
-      }
-
-
-      .header__background{
-        @extend %header__sub;
-        @extend %headerFlow;
-
-        filter:blur(10px); // Blur it
-        opacity:.2;
+      .footer__container{
+        @extend %blurred__sub;
+        list-style:none;
+        margin:0 1.2em;
+        padding:0;
+        letter-spacing:1.5em;
+        > li {
+          display:inline-block;
+          line-height:$footer-height;
+          font-size:1.5em;
+        }
+        .spacer{
+          width:.22em;
+        }
       }
 
   .phone__content{
     @extend %contentFlow;
+    height:$content-height - ($header-height + $footer-height);
   }
 
 

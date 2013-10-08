@@ -13,7 +13,6 @@
 }
 
 // Header section, blur can be applyed here.
-%headerFlow,
 %contentFlow{
   // Performance!
   transform:translateZ(0);
@@ -25,16 +24,9 @@
           flow-from: content;
 }
 
-%contentFlow{
-  -webkit-overflow-scrolling: touch;
-}
 
 @mixin setContentHeight($content-height, $header-height){
   height: $content-height;
-
-  // To archive the blur effect in the header, the content must flow though the .header__background element.
-  transform:translateY(-$header-height);
-
   // Move the content beneth the header
   padding-top: $header-height;
 }

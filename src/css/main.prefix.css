@@ -1,3 +1,13 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+/* entypo */
+
+/* line 4, ../scss/main.scss */
+
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
 /* line 1, ../scss/_translucent.scss */
 
 .content {
@@ -9,9 +19,9 @@
   overflow-y: auto;
 }
 
-/* line 17, ../scss/_translucent.scss */
+/* line 16, ../scss/_translucent.scss */
 
-.header__background,
+.blurred__background,
 .phone__content {
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -22,24 +32,15 @@
   flow-from: content;
 }
 
-/* line 28, ../scss/_translucent.scss */
-
-.phone__content {
-  -webkit-overflow-scrolling: touch;
-}
-
-/* line 7, ../scss/main.scss */
+/* line 16, ../scss/main.scss */
 
 .content {
   padding: 1em 1em 0 1em;
-  height: 567px;
-  -webkit-transform: translateY(-60px);
-  -ms-transform: translateY(-60px);
-  transform: translateY(-60px);
+  height: 672px;
   padding-top: 60px;
 }
 
-/* line 14, ../scss/main.scss */
+/* line 23, ../scss/main.scss */
 
 .messages {
   margin: 10px 0;
@@ -47,7 +48,7 @@
   list-style-type: none;
 }
 
-/* line 20, ../scss/main.scss */
+/* line 29, ../scss/main.scss */
 
 .messages li {
   display: block;
@@ -58,19 +59,19 @@
   padding: 0;
 }
 
-/* line 29, ../scss/main.scss */
+/* line 38, ../scss/main.scss */
 
 .messages li:nth-child(even) {
   float: right;
 }
 
-/* line 33, ../scss/main.scss */
+/* line 42, ../scss/main.scss */
 
 .messages li:nth-child(even) img {
   float: right;
 }
 
-/* line 37, ../scss/main.scss */
+/* line 46, ../scss/main.scss */
 
 .messages p {
   border-radius: .75em;
@@ -81,14 +82,14 @@
   font-size: .875em;
 }
 
-/* line 46, ../scss/main.scss */
+/* line 55, ../scss/main.scss */
 
 .messages li:nth-child(even) p {
   background: #158ffe;
   color: #fff;
 }
 
-/* line 51, ../scss/main.scss */
+/* line 60, ../scss/main.scss */
 
 .messages img {
   display: block;
@@ -96,7 +97,7 @@
   border-radius: .75rem;
 }
 
-/* line 58, ../scss/main.scss */
+/* line 67, ../scss/main.scss */
 
 .phone {
   position: relative;
@@ -106,7 +107,7 @@
   background: url(/img/phone.png);
 }
 
-/* line 66, ../scss/main.scss */
+/* line 75, ../scss/main.scss */
 
 .phone__display {
   position: absolute;
@@ -116,14 +117,34 @@
   width: 319px;
 }
 
-/* line 74, ../scss/main.scss */
+/* line 83, ../scss/main.scss */
 
-.header {
+.blurred {
   position: relative;
   height: 60px;
 }
 
-/* line 80, ../scss/main.scss */
+/* line 88, ../scss/main.scss */
+
+.blurred__background,
+.header__text,
+.footer__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: inherit;
+}
+
+/* line 94, ../scss/main.scss */
+
+.blurred__background {
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+  opacity: .2;
+}
+
+/* line 103, ../scss/main.scss */
 
 .header:before,
 .header:after {
@@ -133,13 +154,13 @@
   z-index: 1;
 }
 
-/* line 87, ../scss/main.scss */
+/* line 110, ../scss/main.scss */
 
 .header:before {
   height: 100%;
 }
 
-/* line 91, ../scss/main.scss */
+/* line 114, ../scss/main.scss */
 
 .header:after {
   height: 1px;
@@ -147,18 +168,7 @@
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* line 99, ../scss/main.scss */
-
-.header__text,
-.header__background {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: inherit;
-}
-
-/* line 106, ../scss/main.scss */
+/* line 121, ../scss/main.scss */
 
 .header__text {
   font-weight: 300;
@@ -167,28 +177,80 @@
   z-index: 4;
 }
 
-/* line 117, ../scss/main.scss */
+/* line 131, ../scss/main.scss */
 
-.header__background {
-  -webkit-filter: blur(10px);
-  filter: blur(10px);
-  opacity: .2;
+.footer {
+  position: relative;
+  height: 45px;
 }
 
-/* line 131, ../scss/main.scss */
+/* line 136, ../scss/main.scss */
+
+.footer:before,
+.footer:after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  z-index: 1;
+}
+
+/* line 143, ../scss/main.scss */
+
+.footer:before {
+  height: 100%;
+}
+
+/* line 147, ../scss/main.scss */
+
+.footer:after {
+  height: 1px;
+  top: 0;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* line 154, ../scss/main.scss */
+
+.footer__container {
+  list-style: none;
+  margin: 0 1.2em;
+  padding: 0;
+  letter-spacing: 1.5em;
+}
+
+/* line 160, ../scss/main.scss */
+
+.footer__container > li {
+  display: inline-block;
+  line-height: 45px;
+  font-size: 1.5em;
+}
+
+/* line 165, ../scss/main.scss */
+
+.footer__container .spacer {
+  width: .22em;
+}
+
+/* line 170, ../scss/main.scss */
+
+.phone__content {
+  height: 462px;
+}
+
+/* line 177, ../scss/main.scss */
 
 body {
   font-family: "Helvetica Neue","Helvetica","sans-serif";
 }
 
-/* line 135, ../scss/main.scss */
+/* line 181, ../scss/main.scss */
 
 .custom {
   position: absolute;
   top: 10px;
 }
 
-/* line 139, ../scss/main.scss */
+/* line 185, ../scss/main.scss */
 
 .custom style {
   display: block;

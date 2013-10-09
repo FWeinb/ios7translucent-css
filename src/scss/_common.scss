@@ -1,0 +1,64 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+.messages {
+  margin:10px 0;
+  padding:0;
+  list-style-type:none;
+}
+
+.messages li {
+  display:block;
+  float:left;
+  clear:both;
+  max-width:60%;
+  margin:0 0 1em 0;
+  padding:0;
+}
+
+.messages li:nth-child(even) {
+  float:right;
+}
+
+.messages li:nth-child(even) img {
+  float:right;
+}
+
+.messages p {
+  border-radius:.75em;
+  background:#e6e5eb;
+  color:#383641;
+  padding:.6875em;
+  margin:0;
+  font-size:.875em;
+}
+
+.messages li:nth-child(even) p {
+  background:#158ffe;
+  color:#fff;
+}
+
+.messages img {
+  display:block;
+  max-width:65%;
+  border-radius:.75rem;
+}
+
+// General page styles
+body{
+  font-family:"Helvetica Neue","Helvetica","sans-serif";
+}
+
+.custom{
+  position:absolute;
+  top:10px;
+
+  style{
+    display:block;
+    white-space:pre;
+  }
+}

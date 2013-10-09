@@ -109,45 +109,34 @@ body {
   white-space: pre;
 }
 
-/* line 9, ../scss/main.scss */
+/* line 8, ../scss/mobile.scss */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 16, ../scss/mobile.scss */
 
 .content {
   padding: 1em 1em 0 1em;
-  height: -webkit-calc(567px + 60px + 45px);
-  height: calc(567px + 60px + 45px);
+  height: 100vh;
   padding-top: 60px;
-  padding-bottom: -webkit-calc(60px + 60px + 45px);
-  padding-bottom: calc(60px + 60px + 45px);
+  padding-bottom: 60px;
 }
 
-/* line 17, ../scss/main.scss */
-
-.phone {
-  position: relative;
-  width: 509px;
-  height: 931px;
-  margin: 0 auto;
-  background: url(/img/phone.png);
-}
-
-/* line 25, ../scss/main.scss */
-
-.phone__display {
-  position: absolute;
-  top: 182px;
-  left: 95px;
-  height: 567px;
-  width: 319px;
-}
-
-/* line 33, ../scss/main.scss */
+/* line 24, ../scss/mobile.scss */
 
 .blurred {
   position: relative;
   height: 60px;
 }
 
-/* line 38, ../scss/main.scss */
+/* line 29, ../scss/mobile.scss */
 
 .blurred__background,
 .header__text,
@@ -159,7 +148,7 @@ body {
   height: inherit;
 }
 
-/* line 44, ../scss/main.scss */
+/* line 35, ../scss/mobile.scss */
 
 .blurred__background {
   -webkit-filter: blur(10px);
@@ -167,7 +156,7 @@ body {
   opacity: .2;
 }
 
-/* line 53, ../scss/main.scss */
+/* line 44, ../scss/mobile.scss */
 
 .header:before,
 .header:after {
@@ -177,13 +166,13 @@ body {
   z-index: 1;
 }
 
-/* line 60, ../scss/main.scss */
+/* line 51, ../scss/mobile.scss */
 
 .header:before {
   height: 100%;
 }
 
-/* line 64, ../scss/main.scss */
+/* line 55, ../scss/mobile.scss */
 
 .header:after {
   height: 1px;
@@ -191,7 +180,7 @@ body {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* line 71, ../scss/main.scss */
+/* line 62, ../scss/mobile.scss */
 
 .header__text {
   font-weight: 300;
@@ -200,14 +189,13 @@ body {
   z-index: 4;
 }
 
-/* line 81, ../scss/main.scss */
+/* line 72, ../scss/mobile.scss */
 
 .footer {
-  position: relative;
   height: 45px;
 }
 
-/* line 86, ../scss/main.scss */
+/* line 76, ../scss/mobile.scss */
 
 .footer:before,
 .footer:after {
@@ -217,13 +205,13 @@ body {
   z-index: 1;
 }
 
-/* line 93, ../scss/main.scss */
+/* line 83, ../scss/mobile.scss */
 
 .footer:before {
   height: 100%;
 }
 
-/* line 97, ../scss/main.scss */
+/* line 87, ../scss/mobile.scss */
 
 .footer:after {
   height: 1px;
@@ -231,7 +219,7 @@ body {
   box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* line 104, ../scss/main.scss */
+/* line 94, ../scss/mobile.scss */
 
 .footer__container {
   list-style: none;
@@ -240,7 +228,7 @@ body {
   letter-spacing: 1.5em;
 }
 
-/* line 110, ../scss/main.scss */
+/* line 100, ../scss/mobile.scss */
 
 .footer__container > li {
   display: inline-block;
@@ -248,34 +236,21 @@ body {
   font-size: 1.5em;
 }
 
-/* line 115, ../scss/main.scss */
+/* line 105, ../scss/mobile.scss */
 
 .footer__container .spacer {
   width: .22em;
 }
 
-/* line 120, ../scss/main.scss */
+/* line 110, ../scss/mobile.scss */
 
 .phone__content {
-  height: 462px;
+  height: -webkit-calc(100% - 45px - 60px);
+  height: calc(100% - 45px - 60px);
 }
 
-/* line 127, ../scss/main.scss */
+/* line 115, ../scss/mobile.scss */
 
-body {
-  font-family: "Helvetica Neue","Helvetica","sans-serif";
-}
-
-/* line 131, ../scss/main.scss */
-
-.custom {
-  position: absolute;
-  top: 10px;
-}
-
-/* line 135, ../scss/main.scss */
-
-.custom style {
-  display: block;
-  white-space: pre;
+.wrapper {
+  height: 100%;
 }

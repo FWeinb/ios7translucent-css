@@ -48,8 +48,11 @@ module.exports = function(grunt) {
         browsers: ['last 2 version']
        },
        dev: {
-        src: src+'/css/main.css',
-        dest: src+'/css/main.prefix.css'
+        cwd : src+'/css',
+        src: ['*.css', '!**/*prefix.css'],
+        dest: src+'/css',
+        ext : '.prefix.css',
+        expand : true
        },
      }
 

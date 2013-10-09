@@ -3,30 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>iOS7 Translucent Demo</title>
-  <link rel="stylesheet" href="css/main.prefix.css">
+  <link rel="stylesheet" href="css/mobile.prefix.css">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
 </head>
 <body>
 
-  <div class="phone">
-    <div class="phone__display">
-      <!-- .header>.header__text+.header__tint+.header__background -->
-      <div class="blurred header">
-        <div class="header__text">Header</div>
-        <div class="blurred__background js-header__background"></div>
-      </div>
-      <div class="phone__content"></div>
-      <div class="blurred footer">
-        <ul class="footer__container">
-          <li class="entypo-left-open-big"></li>
-          <li class="entypo-right-open-big"></li>
-          <li class="spacer"></li><!-- This is bad-->
-          <li class="entypo-down-open-big"></li>
-          <li class="entypo-up-open-big"></li>
-        </ul>
-        <div class="blurred__background"></div>
-      </div>
-    </div>
+<div class="wrapper">
+  <div class="blurred header">
+    <div class="header__text">Header</div>
+    <div class="blurred__background js-header__background"></div>
   </div>
+  <div class="phone__content"></div>
+  <div class="blurred footer">
+    <ul class="footer__container">
+    </ul>
+    <div class="blurred__background"></div>
+  </div>
+</div>
 
   <!-- The content will be here -->
   <div class="content">
@@ -112,8 +108,5 @@
     </ol>
   </div>
 
-
-  <script src="/js/dat.gui.min.js"></script>
-  <script src="/js/main.js"></script>
 </body>
 </html>

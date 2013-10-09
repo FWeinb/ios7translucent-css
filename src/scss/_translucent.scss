@@ -25,8 +25,9 @@
 }
 
 
-@mixin setContentHeight($content-height, $header-height){
-  height: $content-height;
+@mixin setContentHeight($content-height, $header-height, $footer-height){
+  height: calc(#{$content-height} + #{$header-height} + #{$footer-height});
   // Move the content beneth the header
   padding-top: $header-height;
+  padding-bottom:  calc(#{$header-height} + #{$header-height} + #{$footer-height});
 }

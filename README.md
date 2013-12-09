@@ -14,6 +14,15 @@ You need to have nodejs and ruby for compass/sass
   2. `npm install`
   3. `grunt dev` will open the `src/index.html` in your default browser
 
+### Mobile
+
+  1. Open http://localhost:9000/mobile.html on your iPhone.
+  2. Get **inertial scrolling** to work
+
+
+Just for you to see how close it is a GIF:
+![iOS7 Wrapper on iPhone 5S](https://dl.dropboxusercontent.com/u/5319/github/ios7translucent/iOS7-WebApp.gif)
+
 
 ## Where is it working?
 

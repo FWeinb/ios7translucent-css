@@ -21,6 +21,7 @@ You need to have nodejs and ruby for compass/sass
 
 
 Just for you to see how close it is a GIF:
+
 ![iOS7 Wrapper on iPhone 5S](https://dl.dropboxusercontent.com/u/5319/github/ios7translucent/iOS7-WebApp.gif)
 
 

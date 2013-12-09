@@ -113,7 +113,7 @@ body {
   height: 60px;
 }
 
-/* line 29, ../scss/mobile.scss */
+/* line 30, ../scss/mobile.scss */
 .blurred__background, .header__text, .footer__container {
   position: absolute;
   top: 0;
@@ -122,31 +122,31 @@ body {
   height: inherit;
 }
 
-/* line 35, ../scss/mobile.scss */
+/* line 36, ../scss/mobile.scss */
 .blurred__background {
   filter: blur(10px);
   opacity: .2;
 }
 
-/* line 44, ../scss/mobile.scss */
+/* line 46, ../scss/mobile.scss */
 .header:before, .header:after {
   position: absolute;
   content: '';
   width: 100%;
   z-index: 1;
 }
-/* line 51, ../scss/mobile.scss */
+/* line 53, ../scss/mobile.scss */
 .header:before {
   height: 100%;
 }
-/* line 55, ../scss/mobile.scss */
+/* line 57, ../scss/mobile.scss */
 .header:after {
   height: 1px;
   bottom: 0;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* line 62, ../scss/mobile.scss */
+/* line 64, ../scss/mobile.scss */
 .header__text {
   font-weight: 300;
   text-align: center;
@@ -154,52 +154,52 @@ body {
   z-index: 4;
 }
 
-/* line 72, ../scss/mobile.scss */
+/* line 74, ../scss/mobile.scss */
 .footer {
   height: 45px;
 }
-/* line 76, ../scss/mobile.scss */
+/* line 78, ../scss/mobile.scss */
 .footer:before, .footer:after {
   position: absolute;
   content: '';
   width: 100%;
   z-index: 1;
 }
-/* line 83, ../scss/mobile.scss */
+/* line 85, ../scss/mobile.scss */
 .footer:before {
   height: 100%;
 }
-/* line 87, ../scss/mobile.scss */
+/* line 89, ../scss/mobile.scss */
 .footer:after {
   height: 1px;
   top: 0;
   box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* line 94, ../scss/mobile.scss */
+/* line 96, ../scss/mobile.scss */
 .footer__container {
   list-style: none;
   margin: 0 1.2em;
   padding: 0;
   letter-spacing: 1.5em;
 }
-/* line 100, ../scss/mobile.scss */
+/* line 102, ../scss/mobile.scss */
 .footer__container > li {
   display: inline-block;
   line-height: 45px;
   font-size: 1.5em;
 }
-/* line 105, ../scss/mobile.scss */
+/* line 107, ../scss/mobile.scss */
 .footer__container .spacer {
   width: .22em;
 }
 
-/* line 110, ../scss/mobile.scss */
+/* line 112, ../scss/mobile.scss */
 .phone__content {
   height: calc(100% - 45px - 60px);
 }
 
-/* line 115, ../scss/mobile.scss */
+/* line 117, ../scss/mobile.scss */
 .wrapper {
   height: 100%;
 }

@@ -107,6 +107,11 @@
       </li>
     </ol>
   </div>
-
+<script>
+  // Black statusbar hack by http://blog.flinto.com/how-to-get-black-status-bars.html
+  if (window.navigator.standalone) {
+    document.querySelector("meta[name='apple-mobile-web-app-status-bar-style']").remove();
+  }
+</script>
 </body>
 </html>

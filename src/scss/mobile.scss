@@ -24,6 +24,7 @@ body{
   .blurred{
     position:relative;
     height:$header-height;
+
   }
 
   %blurred__sub{
@@ -40,6 +41,7 @@ body{
   }
 
   .header{
+
     &:before,
     &:after{
       position:absolute;

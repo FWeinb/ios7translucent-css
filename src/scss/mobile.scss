@@ -15,12 +15,20 @@ body{
 
 .content{
   @extend %content;
-  padding:1em 1em 0 1em;
-  height:100vh;
-  padding-top:$header-height;
-  padding-bottom:$header-height;
-}
 
+  overflow:hidden;
+  position: relative;
+  box-sizing:border-box;
+
+  width:100vw;
+  height:100vh;
+}
+  .scroller{
+    position: absolute;
+    box-sizing:border-box;
+    width:inherit;
+    padding:$header-height 1em $footer-height 1em;
+  }
   .blurred{
     position:relative;
     height:$header-height;

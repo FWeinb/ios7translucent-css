@@ -1,6 +1,6 @@
 {
   "name": "ios7translucent",
-  "version": "0.1",
+  "version": "0.0.1",
   "description": "Rebulid the iOS7 Translucent topbar in CSS using CSS Regions",
   "author": "Fabrice Weinberg",
   "license": "MIT",

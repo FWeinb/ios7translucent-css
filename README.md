@@ -5,6 +5,7 @@ Implementation of the iOS7 translucent topbar using CSS Regions
 
 Live Demo on [Codepen](http://codepen.io/FWeinb/full/0beac813cb418cb725a0f4173d85bd51)
 
+**Warning:** Does not work anymore on iOS8 and higher.
 
 ## How to help?
 
